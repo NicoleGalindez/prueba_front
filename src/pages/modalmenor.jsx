@@ -2,7 +2,7 @@ import React from 'react';
 import { Typography, Button } from "@material-tailwind/react"; // Asegúrate de importar los componentes necesarios de Material Tailwind
 
 const ModalMenor = ({ onClose, childInfo }) => {
-    const { nombre, apellido, tipoIdentificacion, numeroIdentificacion, edad, telefono, correo } = childInfo;
+    const { nombres, apellidos, tipoIdentificacion, numeroIdentificacion, edad, telefono, correo } = childInfo;
 
     return (
         <div className="modal">
@@ -12,10 +12,10 @@ const ModalMenor = ({ onClose, childInfo }) => {
                 </Typography>
                 <div>
                     <Typography variant="paragraph" className="font-normal" color="gray">
-                        Nombre: {nombre}
+                        Nombre: {nombres}
                     </Typography>
                     <Typography variant="paragraph" className="font-normal" color="gray">
-                        Apellido: {apellido}
+                        Apellido: {apellidos}
                     </Typography>
                     <Typography variant="paragraph" className="font-normal" color="gray">
                         Tipo de identificación: {tipoIdentificacion}

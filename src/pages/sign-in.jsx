@@ -22,12 +22,18 @@ export function SignIn() {
             console.log(response.data);
 
             const userData = JSON.stringify(response.data);
-            localStorage.setItem("user", userData)
+            localStorage.setItem("user", userData);
 
             const toastId = toast.success(`Bienvenido ${response.data.nombres}`);
             setTimeout(() => {
                 toast.dismiss(toastId); // Ocultar el toast después de 3 segundos
-                navigate("/profile");
+                if(response.data.rol == "tutor"){
+                    navigate("/profile");
+                }else if("admin"){
+                    navigate("/admin");
+                }else{
+                    navigate("/home");
+                }
             }, 2000);
         } catch (error) {
             toast.error(error.response.data.message);

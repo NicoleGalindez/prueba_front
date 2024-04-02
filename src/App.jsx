@@ -3,7 +3,7 @@ import {Navbar} from "@/widgets/layout";
 import routes from "@/routes";
 import {Profile, SignIn, SignUp} from "./pages";
 import Admin from "@/pages/admin.jsx";
-import PrivateRoute from "./private/PrivateRoute.jsx";
+import {PrivateRouteAdmin, PrivateRouteTutor} from "./private/PrivateRoute.jsx";
 
 function App() {
     const {pathname} = useLocation();
@@ -33,17 +33,17 @@ function App() {
                 <Route
                     path="/profile"
                     element={
-                        <PrivateRoute isAuthenticated={isAuthenticated}>
+                        <PrivateRouteTutor isAuthenticated={isAuthenticated} userRole={userData.rol} >
                             <Profile/>
-                        </PrivateRoute>
+                        </PrivateRouteTutor>
                     }
                 />
                 <Route
                     path="/admin"
                     element={
-                        <PrivateRoute isAuthenticated={isAuthenticated}>
+                        <PrivateRouteAdmin isAuthenticated={isAuthenticated} userRole={userData.rol}>
                             <Admin/>
-                        </PrivateRoute>
+                        </PrivateRouteAdmin>
                     }
                 />
                 <Route path="/sign-in" element={<SignIn/>}/>
