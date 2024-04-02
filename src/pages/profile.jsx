@@ -131,7 +131,39 @@ export function Profile() {
                                 </Typography>
                                
                             </div>
-                            
+---------------------
+
+
+<div className="mr-4 p-3 text-center">
+                          <Typography
+                           variant="lead"
+                           color="blue-gray"
+                           className="font-bold uppercase"
+                                >
+                                Menor (es) a Cargo:
+                                </Typography>
+                                <a href="#" style={{ textDecoration: 'underline' }} onClick={() => openChildModal("Angel David Dorado")}>
+                            <Typography
+                            variant="small"
+                            className="font-normal text-blue-gray-500">
+                                    Angel David Dorado (12 años)
+                                </Typography>
+                                </a>
+                                <a href="#" style={{ textDecoration: 'underline' }} onClick={() => openChildModal("Kevin Sangiago Dorado")}>
+                                <Typography
+                                    variant="small"
+                                className="font-normal text-blue-gray-500" >
+                                Kevin Sangiago Dorado (10 años)
+                                </Typography>
+                                </a>
+                              {showChildModal && (
+                            <ModalMenor
+                                onClose={closeChildModal}
+                                childInfo={selectedChild}
+                            />
+                                )}
+                     </div>
+ -------------------------       
                                 </div>
                                 
                             
@@ -146,40 +178,35 @@ export function Profile() {
                                     Agregar un menor
                                 </Button>
 
-                                <div className="mr-4 p-3 text-center">
+                     <div className="mr-4 p-3 text-center">
                           <Typography
                            variant="lead"
                            color="blue-gray"
                            className="font-bold uppercase"
-                      >
-                    Menor (es) a Cargo:
-                    </Typography>
-                    <a href="#" style={{ textDecoration: 'underline' }} onClick={() => openChildModal("Angel David Dorado")}>
-                   <Typography
-                   variant="small"
-                  className="font-normal text-blue-gray-500"
-                  >
-                    Angel David Dorado (12 años)
-                </Typography>
-                  </a>
-                  <a href="#" style={{ textDecoration: 'underline' }} onClick={() => openChildModal("Kevin Sangiago Dorado")}>
-                <Typography
-                    variant="small"
-                   className="font-normal text-blue-gray-500"
-             >
-                 Kevin Sangiago Dorado (10 años)
-                  </Typography>
-                 </a>
-                 {showChildModal && (
-    <ModalMenor
-        onClose={closeChildModal}
-        childInfo={selectedChild}
-    />
-)}
-
-            
-        
-                </div>
+                                >
+                                Menor (es) a Cargo:
+                                </Typography>
+                                <a href="#" style={{ textDecoration: 'underline' }} onClick={() => openChildModal("Angel David Dorado")}>
+                            <Typography
+                            variant="small"
+                            className="font-normal text-blue-gray-500">
+                                    Angel David Dorado (12 años)
+                                </Typography>
+                                </a>
+                                <a href="#" style={{ textDecoration: 'underline' }} onClick={() => openChildModal("Kevin Sangiago Dorado")}>
+                                <Typography
+                                    variant="small"
+                                className="font-normal text-blue-gray-500" >
+                                Kevin Sangiago Dorado (10 años)
+                                </Typography>
+                                </a>
+                              {showChildModal && (
+                            <ModalMenor
+                                onClose={closeChildModal}
+                                childInfo={selectedChild}
+                            />
+                                )}
+                     </div>
 
 
 
