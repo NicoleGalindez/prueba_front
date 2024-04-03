@@ -22,7 +22,7 @@ const News = () => {
         <section className="bg-gray-100 py-10 px-4">
             <div className="container mx-auto">
                 <div className="text-center mb-10">
-                    <h3 className="text-3xl font-bold text-custom-blue mb-4">¡Adolescentes Desaparecidos!</h3>
+                    <h3 className="text-3xl font-bold text-blue-800 mb-4">¡Adolescentes Desaparecidos!</h3>
                     <p className="text-lg text-gray-700">¡Ayúdanos a encontrar a estos adolescentes desaparecidos! Si tienes información, por favor contáctanos.</p>
                 </div>
 
@@ -31,7 +31,7 @@ const News = () => {
                         <Card key={_id} color="white" shadow="xl" className="text-center">
                             <img src={foto} alt={nombre} className="w-full h-auto object-cover rounded-t-lg" style={{ height: '200px' }} />
                             <div className="p-4">
-                                <Typography variant="h5" color="custom-blue" className="mb-2">
+                            <Typography variant="h5" className="text-blue-800 mb-2">
                                     {nombre}
                                 </Typography>
                                 <Typography className="font-normal text-gray-800">
