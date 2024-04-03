@@ -230,8 +230,10 @@ const Admin = () => {
                                     </div>
                                 </div>
                                 <div className="p-4 w-2/3">
-                                    <h3 className="text-lg font-semibold mb-2">Título de la Publicación</h3>
-                                    <p className="text-gray-600 mb-2">Contenido de la publicación.</p>
+                               
+                                    <h3 className="text-lg font-semibold mb-2">Nombre</h3>
+                                    <p className="text-gray-600 mb-2">Descripcion</p>
+                        
                                     <div className="flex justify-between items-center">
                                         
                                         <div>
@@ -256,8 +258,8 @@ const Admin = () => {
                                     </div>
                                 </div>
                                 <div className="p-4 w-2/3">
-                                    <h3 className="text-lg font-semibold mb-2">Título de la Publicación</h3>
-                                    <p className="text-gray-600 mb-2">Contenido de la publicación.</p>
+                                    <h3 className="text-lg font-semibold mb-2">Nombre</h3>
+                                    <p className="text-gray-600 mb-2">Descripcion</p>
                                     <div className="flex justify-between items-center">
                                         
                                         <div>
