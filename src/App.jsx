@@ -16,6 +16,7 @@ function App() {
         <>
             {/* Mostrar Navbar solo si no está en las páginas de inicio de sesión */}
             {!(
+
                 pathname === "/sign-in" ||
                 pathname === "/sign-up" ||
                 pathname === "/profile" ||
@@ -30,6 +31,7 @@ function App() {
                 {routes.map(({path, element}, key) => (
                     <Route key={key} exact path={path} element={element}/>
                 ))}
+                
                 <Route
                     path="/profile"
                     element={

@@ -116,7 +116,7 @@ export function Profile() {
         <section className="relative block h-[50vh]">
             <Toaster />
             <div
-                className="bg-profile-background absolute top-0 h-full w-full bg-[url('/img/background-9-copia.jpg')] bg-cover bg-center scale-100" />
+                className="bg-profile-background absolute top-0 h-full w-full bg-[url('/img/background-3.png')] bg-cover bg-center scale-100" />
             <div className="absolute top-0 h-full w-full bg-black/60 bg-cover bg-center" />
         </section>
         <section className="relative bg-white py-16">
@@ -158,14 +158,14 @@ export function Profile() {
                         <div
                             className="mt-10 mb-10 flex lg:flex-col justify-between items-center lg:justify-end lg:mb-0 lg:px-4 flex-wrap lg:-mt-5">
                             <Button
-                                className="bg-teal-400 w-fit lg:ml-9"
+                                style={{ background: "#4D5AA6", color: "#ffffff" }}
                                 type="button"
                                 onClick={() => setShowModal(true)}>
                                 Agregar un menor
                             </Button>
                     <br />
                             <Button
-                                className="bg-teal-400 w-fit lg:ml-9"
+                               style={{ background: "#4D5AA6", color: "#ffffff" }}
                                 type="button"
                                 onClick={() => setShowModal(true)}>
                                 Reportar un menor desaparecido
@@ -240,7 +240,7 @@ export function Profile() {
                                         {menor.edad} años
                                     </Typography>
                                     
-                                    <button className="text-[#8CD1C6] font-semibold hover:underline focus:outline-none focus:text-blue-600 transition duration-200" onClick={() => openChildModal(menor)}>
+                                    <button className="text-[#4D5AA6] font-semibold hover:underline focus:outline-none focus:text-blue-600 transition duration-200" onClick={() => openChildModal(menor)}>
                                                     Ver Detalles
                                                 </button>
                                 </div>

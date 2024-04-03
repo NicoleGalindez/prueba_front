@@ -1,0 +1,38 @@
+.deleted-post {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-right: 20px; /* Mover el diseño hacia la derecha */
+  }
+  
+  .deleted-post button {
+    background-color: #2563eb;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .deleted-post button:hover {
+    background-color: #1e4bb0;
+  }
+  
+  /* Ajustar el ancho de las columnas */
+  .deleted-post .user-info {
+    width: 40%; /* Ancho de la columna de información del usuario */
+  }
+  
+  .deleted-post .user-id {
+    width: 20%; /* Ancho de la columna de ID del usuario */
+  }
+  
+  .deleted-post .details-button {
+    width: 30%; /* Ancho de la columna del botón de detalles */
+  }
+  
+  .deleted-posts-container {
+    margin-left: 20%; /* Ajusta este valor según sea necesario */
+  }
