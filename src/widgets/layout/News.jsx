@@ -1,15 +1,13 @@
-import React, {useEffect, useState} from 'react';
-import PageTitle from "@/widgets/layout/page-title.jsx";
-import {Card, Typography} from "@material-tailwind/react";
+import React, { useEffect, useState } from 'react';
+import { Card, Typography } from "@material-tailwind/react";
 import axios from "axios";
 
 const News = () => {
+    const [data, setData] = useState([]);
 
-    const [data, setData] = useState([])
-    
     useEffect(() => {
-        loadDataNews()
-    }, [data]);
+        loadDataNews();
+    }, []);
 
     const loadDataNews = async () => {
         try {
@@ -21,44 +19,30 @@ const News = () => {
     }
 
     return (
-        <>
-            <section className="relative bg-white py-10 px-4">
-                <div className="container mx-auto">
-                    <PageTitle section="" heading=" Adolcentes desaparecidos ">
-                        Los adolecentes publicados acontinuación se encuentran desaparecidas, si tienes
-                        información comunicate con nosotros ó con el número de contacto en su respectiva
-                        descripción.
-                    </PageTitle>
+        <section className="bg-gray-100 py-10 px-4">
+            <div className="container mx-auto">
+                <div className="text-center mb-10">
+                    <h3 className="text-3xl font-bold text-custom-blue mb-4">¡Adolescentes Desaparecidos!</h3>
+                    <p className="text-lg text-gray-700">¡Ayúdanos a encontrar a estos adolescentes desaparecidos! Si tienes información, por favor contáctanos.</p>
+                </div>
 
-                    <div
-                        className="mx-auto mt-20 mb-48 grid max-w-5xl grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
-                        {data.map(({_id, nombre, descripcion, foto}) => (
-                            //estaba icon aqui arriba
-                            <Card
-                                key={_id}
-                                color="transparent"
-                                shadow={false}
-                                className="text-center text-blue-gray-900"
-                            >
-
-                                <img src={foto} className="w-full h-auto mb-2  "/>
-                                <Typography variant="h5" color="blue-gray" className="mb-2">
+                <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    {data.map(({ _id, nombre, descripcion, foto }) => (
+                        <Card key={_id} color="white" shadow="xl" className="text-center">
+                            <img src={foto} alt={nombre} className="w-full h-auto object-cover rounded-t-lg" style={{ height: '200px' }} />
+                            <div className="p-4">
+                                <Typography variant="h5" color="custom-blue" className="mb-2">
                                     {nombre}
                                 </Typography>
-                                <Typography className="font-normal text-blue-gray-500">
+                                <Typography className="font-normal text-gray-800">
                                     {descripcion}
                                 </Typography>
-
-                               
-
-
-                            </Card>
-                        ))}
-                    </div>
-
+                            </div>
+                        </Card>
+                    ))}
                 </div>
-            </section>
-        </>
+            </div>
+        </section>
     );
 };
 

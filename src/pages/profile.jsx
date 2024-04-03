@@ -116,7 +116,7 @@ export function Profile() {
         <section className="relative block h-[50vh]">
             <Toaster />
             <div
-                className="bg-profile-background absolute top-0 h-full w-full bg-[url('/img/background-3.png')] bg-cover bg-center scale-105" />
+                className="bg-profile-background absolute top-0 h-full w-full bg-[url('/img/background-9-copia.jpg')] bg-cover bg-center scale-100" />
             <div className="absolute top-0 h-full w-full bg-black/60 bg-cover bg-center" />
         </section>
         <section className="relative bg-white py-16">
@@ -126,7 +126,7 @@ export function Profile() {
                         <div className="relative flex gap-6 items-start">
                             <div className="-mt-20 w-40">
                                 <Avatar
-                                    src="/img/perfil.png"
+                                    src="/img/perfil2.png"
                                     alt="Profile picture"
                                     variant="circular"
                                     className="h-full w-full"
@@ -158,33 +158,21 @@ export function Profile() {
                         <div
                             className="mt-10 mb-10 flex lg:flex-col justify-between items-center lg:justify-end lg:mb-0 lg:px-4 flex-wrap lg:-mt-5">
                             <Button
-                                className="bg-gray-900 w-fit lg:ml-auto"
+                                className="bg-teal-400 w-fit lg:ml-9"
                                 type="button"
                                 onClick={() => setShowModal(true)}>
                                 Agregar un menor
                             </Button>
+                    <br />
+                            <Button
+                                className="bg-teal-400 w-fit lg:ml-9"
+                                type="button"
+                                onClick={() => setShowModal(true)}>
+                                Reportar un menor desaparecido
+                            </Button>
 
-                            <div className="mr-4 p-3 text-center">
-                                <Typography
-                                    variant="lead"
-                                    color="blue-gray"
-                                    className="font-bold uppercase"
-                                >
-                                    Menor (es) a Cargo:
-                                </Typography>
-                                <div>
-                                    {menores.map((menor) => (
-                                        <a href="#" style={{ textDecoration: 'underline' }} onClick={() => openChildModal(menor)}>
-                                            <Typography
-                                                key={menor._id}
-                                                variant="small"
-                                                className="font-normal text-blue-gray-500">
-                                                {menor.nombres} ({menor.edad} años)
-                                            </Typography>
-                                        </a>
-                                    ))}
-                                </div>
-
+<div className="mr-200 p-3 text-center -ml-4">
+  
 
                                 {showChildModal && (
                                     <ModalMenor
@@ -192,28 +180,29 @@ export function Profile() {
                                         childInfo={selectedChild}
                                     />
                                 )}
+
+                                
                             </div>
+
 
 
 
 
                             <div className="mr-4 p-3 text-center">
                             </div>
-                            {/* <div className="p-3 text-center lg:mr-4">
-                                        <Typography
-                                            variant="lead"
-                                            color="blue-gray"
-                                            className="font-bold uppercase"
-                                        >
-                                            10
-                                        </Typography>
-                                        <Typography
-                                            variant="small"
-                                            className="font-normal text-blue-gray-500"
-                                        >
-                                            Rutas realizadas
-                                        </Typography>
-                                    </div> */}
+                                        {/* <div className="p-3 text-center lg:mr-4">
+                                                    <Typography
+                                                        variant="lead"
+                                                        color="blue-gray"
+                                                        className="font-bold uppercase">
+                                                        10
+                                                    </Typography>
+                                                    <Typography
+                                                        variant="small"
+                                                        className="font-normal text-blue-gray-500">
+                                                        Rutas realizadas
+                                                    </Typography>
+                                                </div> */}
                         </div>
 
                     </div>
@@ -225,7 +214,43 @@ export function Profile() {
                                     Tel: {data.telefono}
                                 </Typography>
                             </div> */}
+                            
+                            
                 </div>
+
+    
+
+
+
+                    <div className="container mx-auto mt-8">
+                    <div className="bg-white px-4 py-6 rounded-lg shadow-md">
+                        <Typography
+                            variant="lead"
+                            color="blueGray"
+                            className="font-bold text-sm uppercase mb-4">
+                            Menores a Cargo
+                        </Typography>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            {menores.map((menor) => (
+                                <div key={menor._id} className="bg-gray-100 p-4 rounded-lg shadow-md">
+                                    <Typography className="font-bold text-blueGray-700">
+                                        {menor.nombres} {menor.apellidos}
+                                    </Typography>
+                                    <Typography className="text-blueGray-500">
+                                        {menor.edad} años
+                                    </Typography>
+                                    
+                                    <button className="text-[#8CD1C6] font-semibold hover:underline focus:outline-none focus:text-blue-600 transition duration-200" onClick={() => openChildModal(menor)}>
+                                                    Ver Detalles
+                                                </button>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+
+
                 <div className="mb-10 py-6">
 
                 </div>
@@ -249,6 +274,9 @@ export function Profile() {
         <div className="bg-white">
             <Footer />
         </div>
+
+
+        
         {showModal && (
             <div className="fixed z-10 inset-0 overflow-y-auto">
                 <div
@@ -265,15 +293,21 @@ export function Profile() {
                                 <Typography variant="h5" className="font-bold mb-4">
                                     Registro Menor
                                 </Typography>
+
                                 <div className="grid grid-cols-1 gap-4">
+                                <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
+                                    Nombres:
+                                </Typography>
                                     <Input
                                         type="text"
                                         size="regular"
-                                        placeholder="Nombre"
+                                        placeholder="Nombres"
                                         value={formData.nombres}
                                         onChange={(e) => setFormData({ ...formData, nombres: e.target.value })}
                                     />
-
+                                <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
+                                Apellidos:
+                                </Typography>
                                     <Input
                                         type="text"
                                         size="regular"
@@ -283,7 +317,7 @@ export function Profile() {
                                     />
 
                                     <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
-                                        Tipo de identificación
+                                        Tipo de identificación:
                                     </Typography>
                                     <select
                                         value={formData.tipoIdentificacion}
@@ -294,12 +328,14 @@ export function Profile() {
                                         className="border-t border-blue-gray-200 focus:border-gray-900 px-4 py-2 rounded-md"
                                     >
                                         <option value="">
-                                            Selecciona tu tipo de identificación
+                                            Selecciona tu tipo de identificación:
                                         </option>
                                         <option value="tarjeta de identidad">Tarjeta de identidad</option>
                                         <option value="registro">Registro</option>
                                     </select>
-
+                                    <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
+                                    Número de identificación:
+                                    </Typography>
                                     <Input
                                         type="number"
                                         size="regular"
@@ -310,6 +346,9 @@ export function Profile() {
                                             numeroIdentificacion: e.target.value
                                         })}
                                     />
+                                    <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
+                                   Edad:
+                                    </Typography>
                                     <Input
                                         type="number"
                                         size="regular"
@@ -317,6 +356,9 @@ export function Profile() {
                                         value={formData.edad}
                                         onChange={(e) => setFormData({ ...formData, edad: e.target.value })}
                                     />
+                                    <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
+                                    Teléfono:
+                                    </Typography>
                                     <Input
                                         type="number"
                                         size="regular"
@@ -324,6 +366,9 @@ export function Profile() {
                                         value={formData.telefono}
                                         onChange={(e) => setFormData({ ...formData, telefono: e.target.value })}
                                     />
+                                    <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
+                                    Correo electrónico:
+                                    </Typography>
                                     <Input
                                         type="email"
                                         size="regular"
@@ -342,8 +387,7 @@ export function Profile() {
                                     block={false}
                                     iconOnly={false}
                                     ripple="light"
-                                    className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm"
-                                >
+                                    className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm">
                                     Registrar menor
                                 </Button>
                                 <Button
@@ -354,8 +398,7 @@ export function Profile() {
                                     iconOnly={false}
                                     ripple="light"
                                     className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
-                                    onClick={() => setShowModal(false)}
-                                >
+                                    onClick={() => setShowModal(false)} >
                                     Cancelar
                                 </Button>
                             </div>
@@ -364,6 +407,12 @@ export function Profile() {
                 </div>
             </div>
         )}
+
+
+
+
+
+
     </>
     )
 };
