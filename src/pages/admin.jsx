@@ -217,65 +217,65 @@ const Admin = () => {
                         </div>
                     )}
 
-{showPublications && (
-    <div className="mt-8 grid grid-cols-1 gap-6">
-        <div className="bg-white rounded-lg overflow-hidden shadow-md publication-card flex">
-            <div className="relative w-1/3">
-                <img src="/placeholder-image.jpg" alt="Placeholder" className="w-full h-40 object-cover object-center" />
-                <div className="absolute top-0 right-0 bg-yellow-500 px-2 py-1 rounded-bl-lg">
-                    <span className="text-white font-semibold">NUEVO</span>
-                </div>
+                    {showPublications && (
+                        <div className="mt-8 grid grid-cols-1 gap-6">
+                            <div className="bg-white rounded-lg overflow-hidden shadow-md publication-card flex">
+                                <div className="relative w-1/3">
+                                    <img src="/placeholder-image.jpg" alt="Placeholder" className="w-full h-40 object-cover object-center" />
+                                    <div className="absolute top-0 right-0 bg-yellow-500 px-2 py-1 rounded-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 18v2a2 2 0 002 2h2a2 2 0 002-2v-2m4-10v-2a7 7 0 00-14 0v2m14 0h-4v5a3 3 0 01-3 3h-2a3 3 0 01-3-3v-5H5" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div className="p-4 w-2/3">
+                                    <h3 className="text-lg font-semibold mb-2">Nombre</h3>
+                                    <p className="text-gray-600 mb-2">Descripción</p>
+                                    <div className="flex justify-between items-center">
+                                        
+                                        <div>
+                                            <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md mr-2">
+                                                Aceptar
+                                            </button>
+                                            <button className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md">
+                                                Rechazar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="bg-white rounded-lg overflow-hidden shadow-md publication-card flex">
+                                <div className="relative w-1/3">
+                                    <img src="/placeholder-image.jpg" alt="Placeholder" className="w-full h-40 object-cover object-center" />
+                                    <div className="absolute top-0 right-0 bg-yellow-500 px-2 py-1 rounded-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 18v2a2 2 0 002 2h2a2 2 0 002-2v-2m4-10v-2a7 7 0 00-14 0v2m14 0h-4v5a3 3 0 01-3 3h-2a3 3 0 01-3-3v-5H5" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div className="p-4 w-2/3">
+                                    <h3 className="text-lg font-semibold mb-2">Nombre</h3>
+                                    <p className="text-gray-600 mb-2">Descripción.</p>
+                                    <div className="flex justify-between items-center">
+                                        
+                                        <div>
+                                            <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md mr-2">
+                                                Aceptar
+                                            </button>
+                                            <button className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md">
+                                                Rechazar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {/* Agrega más publicaciones aquí si es necesario */}
+                        </div>
+                    )}
+                </section>
             </div>
-            <div className="p-4 w-2/3">
-                <h3 className="text-lg font-semibold mb-2">Título de la Publicación</h3>
-                <p className="text-gray-600 mb-2">Contenido de la publicación.</p>
-                <div className="flex justify-between items-center">
-                    <button className="text-blue-500 hover:underline focus:outline-none">
-                        Ver Detalles
-                    </button>
-                    <div>
-                        <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md mr-2">
-                            Aceptar
-                        </button>
-                        <button className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md">
-                            Rechazar
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div className="bg-white rounded-lg overflow-hidden shadow-md publication-card flex">
-            <div className="relative w-1/3">
-                <img src="/placeholder-image.jpg" alt="Placeholder" className="w-full h-40 object-cover object-center" />
-                <div className="absolute top-0 right-0 bg-yellow-500 px-2 py-1 rounded-bl-lg">
-                    <span className="text-white font-semibold">NUEVO</span>
-                </div>
-            </div>
-            <div className="p-4 w-2/3">
-                <h3 className="text-lg font-semibold mb-2">Título de la Publicación</h3>
-                <p className="text-gray-600 mb-2">Contenido de la publicación.</p>
-                <div className="flex justify-between items-center">
-                    <button className="text-blue-500 hover:underline focus:outline-none">
-                        Ver Detalles
-                    </button>
-                    <div>
-                        <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md mr-2">
-                            Aceptar
-                        </button>
-                        <button className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md">
-                            Rechazar
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {/* Agrega más publicaciones aquí si es necesario */}
-    </div>
-)}
-
-
-
-            </section>
 
             {showModal && (
                 <Modal
