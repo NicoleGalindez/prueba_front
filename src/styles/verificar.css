@@ -10,19 +10,20 @@
 /* Imagen de la publicación */
 .publication-card img {
     width: 100%; /* Ancho completo */
-    height: 200px; /* Altura fija */
-    object-fit: cover; /* Escalar la imagen para cubrir */
+    height: auto; /* Altura automática */
+    border-top-left-radius: 10px; /* Redondear la esquina superior izquierda */
+    border-top-right-radius: 10px; /* Redondear la esquina superior derecha */
 }
 
 /* Contenido de la publicación */
 .publication-card .content {
-    padding: 20px; /* Espaciado interno */
+    padding: 10px; /* Espaciado interno */
 }
 
 /* Título de la publicación */
 .publication-card h3 {
-    font-size: 1.5rem; /* Tamaño del título */
-    margin-bottom: 10px; /* Espaciado inferior */
+    font-size: 1rem; /* Tamaño del título */
+    margin-bottom: 5px; /* Espaciado inferior */
 }
 
 /* Botones */
@@ -30,9 +31,9 @@
     cursor: pointer; /* Cambiar el cursor al pasar sobre los botones */
     outline: none; /* Eliminar el contorno al hacer clic */
     border: none; /* Eliminar el borde */
-    padding: 10px 20px; /* Espaciado interno */
+    padding: 8px 12px; /* Espaciado interno */
     border-radius: 5px; /* Bordes redondeados */
-    font-size: 1rem; /* Tamaño de fuente */
+    font-size: 0.7rem; /* Tamaño de fuente */
 }
 
 /* Botón de Ver Detalles */
@@ -42,7 +43,7 @@
 
 /* Botón de Aceptar */
 .publication-card .accept-button {
-    background-color: #48bb78; /* Color de fondo */
+    background-color: #5192e1; /* Color de fondo */
     color: white; /* Color del texto */
 }
 
@@ -50,5 +51,5 @@
 .publication-card .reject-button {
     background-color: #f56565; /* Color de fondo */
     color: white; /* Color del texto */
-    margin-left: 10px; /* Espaciado izquierdo */
+    margin-left: 6px; /* Espaciado izquierdo */
 }
