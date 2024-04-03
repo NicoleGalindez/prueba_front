@@ -110,13 +110,14 @@ export function Profile() {
         }
     }
 
+
     return (<>
 
 
         <section className="relative block h-[50vh]">
             <Toaster />
             <div
-                className="bg-profile-background absolute top-0 h-full w-full bg-[url('/img/background-3.png')] bg-cover bg-center scale-100" />
+                className="bg-profile-background absolute top-0 h-full w-full bg-[url('/img/background-fin.png')] bg-cover bg-center scale-100" />
             <div className="absolute top-0 h-full w-full bg-black/60 bg-cover bg-center" />
         </section>
         <section className="relative bg-white py-16">
@@ -124,6 +125,7 @@ export function Profile() {
                 <div className="container mx-auto">
                     <div className="flex flex-col lg:flex-row justify-between">
                         <div className="relative flex gap-6 items-start">
+
                             <div className="-mt-20 w-40">
                                 <Avatar
                                     src="/img/perfil2.png"
@@ -146,31 +148,36 @@ export function Profile() {
                                     </Typography>
 
                                 </div>
-
-
-
-
                             </div>
 
 
                         </div>
 
-                        <div
-                            className="mt-10 mb-10 flex lg:flex-col justify-between items-center lg:justify-end lg:mb-0 lg:px-4 flex-wrap lg:-mt-5">
-                            <Button
-                                style={{ background: "#4D5AA6", color: "#ffffff" }}
+                        
+                           <div className="mt-10 mb-10 flex justify-center gap-4">
+                           <Button
+                               style={{ background: "#7ED2F3", color: "#000000" }}
+                               type="button"
+                               onClick={() => setShowModal(true)}>
+                               Agregar un menor
+                           </Button>
+                           {/* <Button
+                                style={{ background: "#7ED2F3", color: "#000000" }}
                                 type="button"
-                                onClick={() => setShowModal(true)}>
-                                Agregar un menor
-                            </Button>
-                    <br />
+                                onClick={() => setShowModal(true)}
+                            >
+                                Reportar un menor desaparecido
+                            </Button> */}
+
+
                             <Button
-                               style={{ background: "#4D5AA6", color: "#ffffff" }}
+                                style={{ background: "#7ED2F3", color: "#000000" }}
                                 type="button"
-                                onClick={() => setShowModal(true)}>
+                                onClick={() => setShowModalD(true)}
+                            >
                                 Reportar un menor desaparecido
                             </Button>
-
+                            
 <div className="mr-200 p-3 text-center -ml-4">
   
 
@@ -186,9 +193,8 @@ export function Profile() {
 
 
 
-
-
                             <div className="mr-4 p-3 text-center">
+                                
                             </div>
                                         {/* <div className="p-3 text-center lg:mr-4">
                                                     <Typography
@@ -251,6 +257,8 @@ export function Profile() {
 
 
 
+
+
                 <div className="mb-10 py-6">
 
                 </div>
@@ -263,9 +271,11 @@ export function Profile() {
 
             <div className="my-2 py-6">
 
+         
 
                 <DesaparecidosUpload />
                 <News />
+
 
             </div>
         </section>
