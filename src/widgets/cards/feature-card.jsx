@@ -14,11 +14,12 @@ export function FeatureCard({ color, icon, title, description }) {
           variant="gradient"
           size="lg"
           color={color}
-          className="pointer-events-none mb-6 rounded-full"
+          className="pointer-events-none mb-6 rounded-full  "
+          style={{ color: "#4D5AA6" }}
         >
           {icon}
         </IconButton>
-        <Typography variant="h5" className="mb-2" color="blue-gray">
+        <Typography variant="h5" className="mb-2" color="blue-gray"  >
           {title}
         </Typography>
         <Typography className="font-normal text-blue-gray-600">

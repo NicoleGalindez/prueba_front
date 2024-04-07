@@ -140,11 +140,12 @@ const Admin = () => {
 
     return (
         <div
-            className="flex flex-col h-screen"> {/* Cambiar a flex-col para que el header y el contenido se apilen verticalmente */}
+            className="flex flex-col h-screen  ">
+             {/* Cambiar a flex-col para que el header y el contenido se apilen verticalmente */}
             <Header/> {/* Agrega el componente Header */}
             <Toaster />
             <div className="flex flex-1 overflow-hidden">
-                <aside className="menu bg-gray-200 w-1/5 p-4 fixed h-full overflow-y-auto">
+                <aside className="menu bg-gray-200 w-1/5 p-4 fixed h-full ">
                     <h2 className="menu-title text-lg font-semibold mb-4">Menú Administrador</h2>
                     <ul className="space-y-2">
                         <li className="menu-item">
@@ -158,14 +159,14 @@ const Admin = () => {
                             <button className="menu-button" onClick={handleShowAcceptedPosts}>Publicaciones Aceptadas
                             </button>
                         </li>
-                        <li className="menu-item">
+                        <li className="menu-item flex flex-col h-screen overflow-y-auto">
                             <button className="menu-button" onClick={handleShowUserManagement}>Gestión de Usuarios
                             </button>
                         </li>
 
                     </ul>
                 </aside>
-                <section className="flex-1 p-4 ml-32">
+                <section className="flex-1 p-4 ml-32 overflow-y-auto">
                     <PageTitle section="BIENVENIDO ADMINISTRADOR">
                         GESTIONA TODA LA INFORMACION NECESARIA
                     </PageTitle>
@@ -195,7 +196,7 @@ const Admin = () => {
                         ))}
                     </div>
                     {showDeletedPosts && (
-                        <div className="mt-8">
+                        <div className="mt-8 overflow-y-auto ">
                             <h2 className="text-lg font-semibold mb-4 text-center">Publicaciones Rechazadas</h2>
                             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
                                  style={{
@@ -228,7 +229,7 @@ const Admin = () => {
                     )}
 
                     {showAcceptedPosts && (
-                        <div className="mt-8">
+                        <div className="mt-8 overflow-y-auto">
                             <h2 className="text-lg font-semibold mb-4 text-center">Publicaciones Aceptadas</h2>
                             <div className="flex justify-center mb-4">
                                 <input
@@ -278,8 +279,8 @@ const Admin = () => {
                     )}
 
                     {showPublications && noticias.map((data) => (
-                        <div key={data._id} className="mt-8 grid grid-cols-1 gap-6">
-                            <div className="bg-white rounded-lg overflow-hidden shadow-md publication-card flex">
+                        <div key={data._id} className="mt-8 grid grid-cols-1 gap-6 overflow-y-auto">
+                            <div className="bg-white rounded-lg overflow-hidden shadow-md publication-card flex overflow-y-auto">
                                 <div className="relative w-1/3">
                                     <img src={data.foto} alt="Placeholder"
                                          className="w-full h-40 object-cover object-center"/>

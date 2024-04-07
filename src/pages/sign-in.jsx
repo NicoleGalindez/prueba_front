@@ -13,6 +13,8 @@ export function SignIn() {
     const [password, setPassword] = useState("")
 
     const loginUser = async () => {
+
+      
         try {
             const response = await axios.post("https://nuevomern-7y1b.onrender.com/api/login", {
                 email,
@@ -42,9 +44,13 @@ export function SignIn() {
     }
 
     return (
+
+        
         <section className="m-8 flex gap-4">
-            <Toaster/>
+             <img src="/img/logopngconfiazul.png" alt="Logo" className=" top-0 left-0 w-16 h-16 m-4" />
+             <Toaster/>
             <div className="w-full lg:w-3/5 mt-24">
+
                 <div className="text-center">
                     <Typography variant="h2" className="font-bold mb-4">Iniciar Sesion</Typography>
 
@@ -93,7 +99,8 @@ export function SignIn() {
                         </Typography>}
                         containerProps={{className: "-ml-2.5"}}
                     />
-                    <Button onClick={() => loginUser()} className="mt-6" fullWidth>
+                    <Button onClick={() => loginUser()} className="mt-6" fullWidth
+                    style={{ background: "#7ED2F3", color: "#000000" }}>
                         Iniciar Sesion
                     </Button>
 
@@ -107,7 +114,7 @@ export function SignIn() {
             </div>
             <div className="w-2/5 h-full hidden lg:block">
                 <img
-                    src="/img/madre.jpg"
+                    src="/img/inicio.jpg"
                     className="h-full w-full object-cover rounded-3xl"
                 />
             </div>

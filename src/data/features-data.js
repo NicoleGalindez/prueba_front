@@ -6,7 +6,8 @@ import {
 
 export const featuresData = [
   {
-    color: "gray",
+    
+    color: "blue-600",
     title: "Como funciona nuestro aplicativo",
     icon:   CogIcon,
     description: 

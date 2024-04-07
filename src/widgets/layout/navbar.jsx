@@ -75,7 +75,7 @@ export function Navbar({brandName, routes, action, img}) {
           </Typography> */}
 
                     <img
-                        src="/img/logopngconfiblanco.png "
+                        src="/img/logopngconfiazul.png "
                         alt={brandName}
                         className="w-35 h-20 cursor-pointer py-1.5 font-bold"
                     />
@@ -87,7 +87,9 @@ export function Navbar({brandName, routes, action, img}) {
                     <Link
                         to="/sign-up"
                     >
-                        <Button variant="text" size="sm" color="white" fullWidth>
+                        <Button variant="text" size="sm" color="white" fullWidth
+                                                       style={{ background: "#7ED2F3", color: "#000000" }}
+                                                       >
                             Registrarme
                         </Button>
                     </Link>
@@ -140,7 +142,9 @@ Navbar.defaultProps = {
         <Link
             to="/sign-in"
         >
-            <Button variant="gradient" size="sm" fullWidth>
+            <Button variant="gradient" size="sm" fullWidth
+                                           style={{ background: "#7ED2F3", color: "#000000" }}
+                                           >
                 iniciar sesion
             </Button>
         </Link>

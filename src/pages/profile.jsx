@@ -12,6 +12,7 @@ import News from "@/widgets/layout/News.jsx";
 import ModalMenor from "@/pages/modalmenor";
 import '../styles/modalmenor.css';
 
+
 export function Profile() {
     const [showChildModal, setShowChildModal] = useState(false);
     const [showRegistroModal, setShowRegistroModal] = useState(false);
@@ -111,15 +112,105 @@ export function Profile() {
     }
 
 
+
+
+
+
+
+
+
+
+    //_-_----------------
+
+
+    // Definimos las opciones del menú
+const menuOptions = [
+    { label: ' Ver reportes', action: () => handleSeeMissingChildren() },
+    { label: ' Cerrar sesion', action: () => handleLogout() }
+];
+
+// Estado para controlar la visibilidad del menú desplegable
+const [menuOpen, setMenuOpen] = useState(false);
+
+// Función para manejar el clic en el ícono del menú
+const handleMenuClick = () => {
+    setMenuOpen(!menuOpen); // Cambiamos el estado para mostrar u ocultar el menú
+};
+
+// Función para manejar las acciones del menú
+const handleMenuOptionClick = (action) => {
+    action(); // Ejecutamos la acción asociada a la opción del menú
+    setMenuOpen(false); // Ocultamos el menú después de hacer clic en una opción
+};
+
+
     return (<>
 
 
-        <section className="relative block h-[50vh]">
+        {/* <section className="relative block h-[50vh]">
             <Toaster />
-            <div
-                className="bg-profile-background absolute top-0 h-full w-full bg-[url('/img/background-fin.png')] bg-cover bg-center scale-100" />
+            <div className="bg-profile-background absolute top-0 h-full w-full bg-[url('/img/background-fin.png')] bg-cover bg-center scale-100" />
+           
+
             <div className="absolute top-0 h-full w-full bg-black/60 bg-cover bg-center" />
-        </section>
+
+            
+        </section> */}
+
+
+
+<section className="relative block h-[50vh]">
+  <Toaster />
+  <div className="bg-profile-background absolute top-0 h-full w-full bg-[url('/img/background-fin.png')] bg-cover bg-center scale-100" />
+  <div className="absolute top-0 h-full w-full bg-black/60 bg-cover bg-center" />
+
+  {/* Botón del menú */}
+  <span
+    className="bg-[#7ED2F3] rounded-md p-2.5 cursor-pointer hover:bg-blue-00 transition-colors duration-300 absolute top-4 right-4 z-50"
+    style={{ width: "50px", height: "50px" }}
+    onClick={() => handleMenuClick()}
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-8 w-8 text-black"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+    >
+      <path
+        fillRule="evenodd"
+        d="M3 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V3zm0 5a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8zm0 5a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1z"
+        clipRule="evenodd"
+      />
+    </svg>
+  </span>
+
+{/* Menú desplegable */}
+{/* Menú desplegable */}
+{menuOpen && (
+            <div className="absolute top-10 right-10 bg-white shadow-md rounded-md">
+                {menuOptions.map((option, index) => (
+                    <div
+                        key={index}
+                        className="p-3 hover:bg-[#4D5AA6]  text-[#000000]"
+
+                        onClick={() => handleMenuOptionClick(option.action)}
+                    >
+                        {option.label}
+                    </div>
+                ))}
+            </div>
+        )}
+
+</section>
+
+
+
+
+
+
+
+
+
         <section className="relative bg-white py-16">
             <div className="relative mb-6 -mt-40 flex w-full px-4 min-w-0 flex-col break-words bg-white">
                 <div className="container mx-auto">
@@ -178,6 +269,15 @@ export function Profile() {
                                 Reportar un menor desaparecido
                             </Button>
                             
+
+
+
+                            
+                            
+
+
+                         
+                            
 <div className="mr-200 p-3 text-center -ml-4">
   
 
@@ -229,7 +329,7 @@ export function Profile() {
 
 
                     <div className="container mx-auto mt-8">
-                    <div className="bg-white px-4 py-6 rounded-lg shadow-md">
+                    <div className="  bg-blue-100 px-4 py-6 rounded-lg shadow-md ">
                         <Typography
                             variant="lead"
                             color="blueGray"
@@ -390,6 +490,7 @@ export function Profile() {
                             </div>
                             <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
                                 <Button
+                                style={{ background: "#7ED2F3", color: "#000000" }}
                                     type="submit"
                                     color="blue"
                                     buttonType="filled"
