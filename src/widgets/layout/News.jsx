@@ -19,9 +19,9 @@ const News = () => {
     }
 
     return (
-        <section className="bg-gray-100 py-10 px-4">
-            <div className="container mx-auto">
-                <div className="text-center mb-10">
+        <section>
+            <div className="mx-auto">
+                <div className="text-center">
                     <h3 className="text-3xl font-bold text-blue-800 mb-4">¡Adolescentes Desaparecidos!</h3>
                     <p className="text-lg text-gray-700">¡Ayúdanos a encontrar a estos adolescentes desaparecidos! Si tienes información, por favor contáctanos.</p>
                 </div>

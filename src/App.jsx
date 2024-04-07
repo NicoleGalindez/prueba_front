@@ -35,7 +35,7 @@ function App() {
                 <Route
                     path="/profile"
                     element={
-                        <PrivateRouteTutor isAuthenticated={isAuthenticated} userRole={userData.rol} >
+                        <PrivateRouteTutor isAuthenticated={isAuthenticated} userRole={userData && userData.rol ? userData.rol : ''} >
                             <Profile/>
                         </PrivateRouteTutor>
                     }
@@ -43,7 +43,7 @@ function App() {
                 <Route
                     path="/admin"
                     element={
-                        <PrivateRouteAdmin isAuthenticated={isAuthenticated} userRole={userData.rol}>
+                        <PrivateRouteAdmin isAuthenticated={isAuthenticated} userRole={userData && userData.rol ? userData.rol : ''}>
                             <Admin/>
                         </PrivateRouteAdmin>
                     }
