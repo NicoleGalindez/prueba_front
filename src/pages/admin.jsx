@@ -320,6 +320,7 @@ const Admin = () => {
                     )}
 
                     {showPublications && noticias.map((data) => (
+                        
                         <div key={data._id} className="mt-8 grid grid-cols-1 gap-6 overflow-y-auto">
                             <div
                                 className="bg-white rounded-lg overflow-hidden shadow-md publication-card flex overflow-y-auto">

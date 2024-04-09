@@ -276,21 +276,14 @@ export function Profile() {
                             </div>
 
 
-                            <div className="mt-10 mb-10 flex justify-center gap-4">
+                            <div className="mt-8 mb-10 flex justify-center gap-4">
                                 <Button
                                     style={{background: "#7ED2F3", color: "#000000"}}
                                     type="button"
                                     onClick={() => setShowModal(true)}>
                                     Agregar un menor
                                 </Button>
-                                {/* <Button
-                                style={{ background: "#7ED2F3", color: "#000000" }}
-                                type="button"
-                                onClick={() => setShowModal(true)}
-                            >
-                                Reportar un menor desaparecido
-                            </Button> */}
-
+                        
 
                                 <Button
                                     style={{background: "#7ED2F3", color: "#000000"}}
@@ -299,6 +292,9 @@ export function Profile() {
                                 >
                                     Reportar un menor desaparecido
                                 </Button>
+
+                                
+
 
 
                                 <div className="mr-200 p-3 text-center -ml-4">
@@ -408,8 +404,9 @@ export function Profile() {
                                         Registro Menor
                                     </Typography>
 
-                                    <div className="grid grid-cols-1 gap-4">
-                                        <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
+                                    <div className="grid grid-cols-1 gap-3">
+
+                                        <Typography variant="small" color="blue-gray" className="-mb-4 font-medium">
                                             Nombres:
                                         </Typography>
                                         <Input
@@ -419,7 +416,7 @@ export function Profile() {
                                             value={formData.nombres}
                                             onChange={(e) => setFormData({...formData, nombres: e.target.value})}
                                         />
-                                        <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
+                                        <Typography variant="small" color="blue-gray" className="-mb-4 font-medium">
                                             Apellidos:
                                         </Typography>
                                         <Input
@@ -430,7 +427,7 @@ export function Profile() {
                                             onChange={(e) => setFormData({...formData, apellidos: e.target.value})}
                                         />
 
-                                        <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
+                                        <Typography variant="small" color="blue-gray" className="-mb-4 font-medium">
                                             Tipo de identificación:
                                         </Typography>
                                         <select
@@ -447,7 +444,7 @@ export function Profile() {
                                             <option value="tarjeta de identidad">Tarjeta de identidad</option>
                                             <option value="registro">Registro</option>
                                         </select>
-                                        <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
+                                        <Typography variant="small" color="blue-gray" className="-mb-4 font-medium">
                                             Número de identificación:
                                         </Typography>
                                         <Input
@@ -460,7 +457,7 @@ export function Profile() {
                                                 numeroIdentificacion: e.target.value
                                             })}
                                         />
-                                        <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
+                                        <Typography variant="small" color="blue-gray" className="-mb-4 font-medium">
                                             Edad:
                                         </Typography>
                                         <Input
@@ -470,7 +467,7 @@ export function Profile() {
                                             value={formData.edad}
                                             onChange={(e) => setFormData({...formData, edad: e.target.value})}
                                         />
-                                        <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
+                                        <Typography variant="small" color="blue-gray" className="-mb-4 font-medium">
                                             Teléfono:
                                         </Typography>
                                         <Input
@@ -480,7 +477,7 @@ export function Profile() {
                                             value={formData.telefono}
                                             onChange={(e) => setFormData({...formData, telefono: e.target.value})}
                                         />
-                                        <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
+                                        <Typography variant="small" color="blue-gray" className="-mb-4 font-medium">
                                             Correo electrónico:
                                         </Typography>
                                         <Input
