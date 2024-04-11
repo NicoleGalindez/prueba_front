@@ -83,10 +83,22 @@ export function Navbar({brandName, routes, action, img}) {
 
                 </Link>
                 <div className="hidden lg:block">{navList}</div>
+                
                 <div className="hidden gap-2 lg:flex">
+                
+                
+                <Link to="/descargar-app" className="mb-2 block"> {/* Asegúrate de tener la ruta adecuada */}
+                        <Button variant="text" size="sm" fullWidth   style={{  color: "#ffffff", borderRadius:"#000000",  border: "2px solid #ffffff"}}>
+                            Descargar App
+                        </Button>
+                    </Link>
+                  
+
+
                     <Link
                         to="/sign-up"
                     >
+
                         <Button variant="text" size="sm" color="white" fullWidth
                                                        style={{ background: "#7ED2F3", color: "#000000" }}
                                                        >
@@ -117,6 +129,7 @@ export function Navbar({brandName, routes, action, img}) {
             >
                 <div className="container mx-auto">
                     {navList}
+
                     <Link
                         to="/sign-up"
                         className="mb-2 block"
@@ -148,6 +161,9 @@ Navbar.defaultProps = {
                 iniciar sesion
             </Button>
         </Link>
+        
+
+        
     ),
 };
 

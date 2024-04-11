@@ -52,16 +52,18 @@ export function Home() {
                     </div>
                 </div>
             </div>
-            <section className="-mt-32 bg-white px-4 pb-20 pt-4">
-                <div className="container mx-auto">
-                    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <section className="-mt-32 bg-white px-4 pb-20 pt-4" style={{ background: "#f0f0f0" }}>
+                <div className="container mx-auto" >
+                    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 ">
                         {featuresData.map(({color, title, icon, description}) => (
                             <FeatureCard
                                 key={title}
                                 color={color}
                                 title={title}
+                                
                                 icon={React.createElement(icon, {
-                                    className: "w-5 h-5 text-white",
+                                    
+                                    className: "w-5 h-5 text-white  ",
                                 })}
                                 description={description}
                             />
@@ -70,16 +72,16 @@ export function Home() {
                     <div className="mt-32 flex flex-wrap items-center"
                          id="nosotros">
                         <div className="mx-auto -mt-8 w-full px-4 md:w-5/12">
-                            <div
+                            {/* <div
                                 className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-blue-gray-900 p-2 text-center shadow-lg">
                                 <FingerPrintIcon className="h-8 w-8 text-white "/>
-                            </div>
+                            </div> */}
                             <Typography
                                 variant="h3"
                                 className="mb-3 font-bold"
                                 color="blue-gray"
                             >
-                                NOSOTROS:
+                                ConfiApp:
                                 <p></p>
                             </Typography>
                             <Typography className="mb-8 font-normal text-blue-gray-500">
@@ -111,7 +113,7 @@ export function Home() {
                                         color="blue-gray"
                                         className="mb-3 mt-2 font-bold"
                                     >
-                                        Porque elegirnos?
+                                        Somos un equipo
                                     </Typography>
                                     <Typography className="font-normal text-blue-gray-500">
                                         Transparencia y confiabilidad: Nos comprometemos a mantener una comunicación
