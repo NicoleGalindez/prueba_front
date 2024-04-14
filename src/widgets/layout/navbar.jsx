@@ -87,7 +87,7 @@ export function Navbar({brandName, routes, action, img}) {
                 <div className="hidden gap-2 lg:flex">
                 
                 
-                <Link to="/descargar-app" className="mb-2 block"> {/* Asegúrate de tener la ruta adecuada */}
+                <Link  href=" " to="/descargar-app" className="mb-2 block"> {/* Asegúrate de tener la ruta adecuada */}
                         <Button variant="text" size="sm" fullWidth   style={{  color: "#ffffff", borderRadius:"#000000",  border: "2px solid #ffffff"}}>
                             Descargar App
                         </Button>
