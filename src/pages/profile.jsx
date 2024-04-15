@@ -207,7 +207,7 @@ export function Profile() {
 
                 {/* Botón del menú */}
                 <span
-                    className="bg-[#7ED2F3] rounded-md p-2.5 cursor-pointer hover:bg-blue-00 transition-colors duration-300 absolute top-4 right-4 z-50"
+                    className="bg-[#7ED2F3] rounded-md p-2.5 cursor-pointer hover:bg-blue-00 transition-colors duration-300 absolute top-4 right-9 z-100"
                     style={{width: "50px", height: "50px"}}
                     onClick={() => handleMenuClick()}
                 >
@@ -224,14 +224,16 @@ export function Profile() {
       />
     </svg>
   </span>
+  
 
                 {/* Menú desplegable */}
                 {menuOpen && (
-                    <div className="absolute top-10 right-10 bg-white shadow-md rounded-md">
+                    <div className="absolute top-10 right-20 bg-white shadow-md rounded-md ">
                         {menuOptions.map((option, index) => (
                             <div
                                 key={index}
-                                className="p-3 hover:bg-[#4D5AA6]  text-[#000000] cursor-pointer"
+                                className="p-3 hover:bg-[#4D5AA6]  text-[#000000] cursor-pointer  "
+                                style={{width: "200px"}}
 
                                 onClick={() => handleMenuOptionClick(option.action)}>
                                 {option.label}
@@ -276,7 +278,7 @@ export function Profile() {
                             </div>
 
 
-                            <div className="mt-8 mb-10 flex justify-center gap-4">
+                            <div className="mt-8 mb-10 flex justify-center gap-4  ">
                                 <Button
                                     style={{background: "#7ED2F3", color: "#000000"}}
                                     type="button"
@@ -293,6 +295,7 @@ export function Profile() {
                                     Reportar un menor desaparecido
                                 </Button>
 
+<img src="/img/logopngconfiazul-copia.png" alt=""  style={{width: "50px"}} />
                                 
 
 
